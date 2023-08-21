@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" th:href="@{/css/styles.css}">
+
+<head>
+    <title>CSV Data Template</title>
+</head>
+<body>
+
+<table border="2">
+    <tr>
+        <th>Index</th>
+        <th>App Name</th>
+        <th>Host Name</th>
+        <th>Version</th>
+        <th>Mode</th>
+    </tr>
+    <tr th:each="data,iterStat : ${csvDataList}" th:class="${data.error} ? 'error' :''">
+        <td th:text="${iterStat.index + 1}"></td>
+        <td th:text="${data.appName}"></td>
+        <td th:text="${data.hostName}"></td>
+        <td th:text="${data.version}"></td>
+        <td th:text="${data.mode}"></td>
+    </tr>
+</table>
+</body>
+</html>
