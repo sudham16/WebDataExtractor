@@ -48,7 +48,7 @@ public class WebContentURLExtractorService {
 
                     if(cols.size() >0 ) {
                         List<String> values = cols.stream().map(it1 -> it1.text()).collect(Collectors.toList());
-                        if(!values.isEmpty() && !values.get(0).contains("_***_")) {
+                        if(!values.isEmpty() && !values.get(0).contains("_VIP_")) {
                             resultsList.add(values);
                         }
 
